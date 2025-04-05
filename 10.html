@@ -20,7 +20,7 @@
       function show() {
         let words = ["zero","one","two","three","four","five","six","seven","eight","nine"];
         let n = document.getElementById("numvers").value;
-        if (n < 1 || n > 100) return alert("ใส่เลข 1-100 เท่านั้น");
+        if (n < 1 || n > 100) return alert("ใส่ 1 ถึง 100 ");
         let result = [...n].map(d => words[d]).join(",");
         document.getElementById("out").textContent = n + " = " + result;s
       }
