@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>เปลี่ยนสีพื้นหลัง</title>
+</head>
+<body>
+
+  <div>
+    <a href="index.html">ข้อทีี่ 6</a> 
+    <a href="7.html">ข้อที่ 7</a> 
+    <a href="8.html">ข้อที่ 8</a> 
+    <a href="9.html">ข้อที่ 9</a> 
+    <a href="10.html">ข้อที่ 10</a> 
+  </div>
+  <hr>
+
+  <h3>เลือกสีพื้นหลัง</h3>
+  <button onclick="changeColor('red')">สีแดง</button>
+  <button onclick="changeColor('blue')">สีน้ำเงิน</button>
+  <button onclick="changeColor('yellow')">สีเหลือง</button>
+  <button onclick="clearColor()">ล้างสี</button>
+
+  <script>
+    function changeColor(color) {
+      document.body.style.backgroundColor = color;
+    }
+
+    function clearColor() {
+      document.body.style.backgroundColor = "";
+    }
+  </script>
+
+</body>
+</html>

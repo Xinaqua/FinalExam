@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>แสดงข้อมูลทั้งหมดและคนที่ 3</title>
+</head>
+<body>
+
+  <div>
+    <a href="index.html">ข้อที่ 6</a> 
+    <a href="7.html">ข้อที่ 7</a> 
+    <a href="8.html">ข้อที่ 8</a> 
+    <a href="9.html">ข้อที่ 9</a> 
+    <a href="10.html">ข้อที่ 10</a> 
+  </div>
+  <hr>
+
+  <h3>ข้อมูลทั้งหมดและคนที่ 3</h3>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Mobile No.</th>
+        <th>Department</th>
+        <th>Time of Occupy</th>
+      </tr>
+    </thead>
+    <tbody id="data-table">
+
+    </tbody>
+  </table>
+
+  <h3>ข้อมูลของคนที่ 3:</h3>
+  <pre id="person-3"></pre>
+
+  <script>
+    const data = [
+      {
+        "Name": "Michael",
+        "Surname": "Time of Occupy",
+        "Mobile No.": "091234567",
+        "Department": "Physics",
+        "Time of Occupy": "30"
+      },
+      {
+        "Name": "David",
+        "Surname": "Chicago",
+        "Mobile No.": "081345678",
+        "Department": "Physics",
+        "Time of Occupy": "35"
+      },
+      {
+        "Name": "Alex",
+        "Surname": "Madrid",
+        "Mobile No.": "085345683",
+        "Department": "Physics",
+        "Time of Occupy": "25"
+      },
+      {
+        "Name": "Denis",
+        "Surname": "Paris",
+        "Mobile No.": "064569385",
+        "Department": "Chemistry",
+        "Time of Occupy": "24"
+      }
+    ];
+
+    const tableBody = document.getElementById("data-table");
+    data.forEach(item => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${item.Name}</td>
+        <td>${item.Surname}</td>
+        <td>${item["Mobile No."]}</td>
+        <td>${item.Department}</td>
+        <td>${item["Time of Occupy"]}</td>
+      `;
+      tableBody.appendChild(row);
+    });
+
+    const person3 = data[2]; 
+    document.getElementById("person-3").textContent = JSON.stringify(person3, null, 2);
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>แสดงเวลา</title>
+</head>
+<body>
+  <div>
+    <a href="index.html">ข้อทีี่ 6</a> 
+    <a href="7.html">ข้อที่ 7</a> 
+    <a href="8.html">ข้อที่ 8</a> 
+    <a href="9.html">ข้อที่ 9</a> 
+    <a href="10.html">ข้อที่ 10</a> 
+  </div>
+  <hr>
+
+  <h3>รับค่าเวลา (hh:mm:ss)</h3>
+  <input id="timeInput" placeholder="เช่น 14:30:15">
+  <button onclick="showTime()">แสดง</button>
+  <p id="result"></p>
+
+  <script>
+    function showTime() {
+      let input = document.getElementById("timeInput").value;
+      let parts = input.split(":");
+
+      if (parts.length === 3) {
+        let hh = parts[0];
+        let mm = parts[1];
+        let ss = parts[2];
+        document.getElementById("result").textContent = 
+          `${hh} นาฬิกา ${mm} นาที ${ss} วินาที`;
+      } else {
+        document.getElementById("result").textContent = "รูปแบบไม่ถูกต้อง";
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Final Exam</title>
+</head>
+<body>
+    <div>
+        <a href="index.html">ข้อทีี่ 6</a> 
+        <a href="7.html">ข้อที่ 7</a> 
+        <a href="8.html">ข้อที่ 8</a> 
+        <a href="9.html">ข้อที่ 9</a> 
+        <a href="10.html">ข้อที่ 10</a> 
+      </div>
+    <input id="num" />
+    <button onclick="show()">แสดง</button>
+    <p id="out"></p>
+  
+    <script>
+      function show() {
+        let words = ["zero","one","two","three","four","five","six","seven","eight","nine"];
+        let n = document.getElementById("num").value;
+        if (n < 1 || n > 100) return alert("ใส่เลข 1-100 เท่านั้น");
+        let result = [...n].map(d => words[d]).join(",");
+        document.getElementById("out").textContent = n + " = " + result;
+      }
+    </script>
+</body>
+</html>
