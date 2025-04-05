@@ -12,17 +12,17 @@
         <a href="9.html">ข้อที่ 9</a> 
         <a href="10.html">ข้อที่ 10</a> 
       </div>
-    <input id="num" />
+    <input id="numvers" />
     <button onclick="show()">แสดง</button>
     <p id="out"></p>
   
     <script>
       function show() {
         let words = ["zero","one","two","three","four","five","six","seven","eight","nine"];
-        let n = document.getElementById("num").value;
+        let n = document.getElementById("numvers").value;
         if (n < 1 || n > 100) return alert("ใส่เลข 1-100 เท่านั้น");
         let result = [...n].map(d => words[d]).join(",");
-        document.getElementById("out").textContent = n + " = " + result;
+        document.getElementById("out").textContent = n + " = " + result;s
       }
     </script>
 </body>

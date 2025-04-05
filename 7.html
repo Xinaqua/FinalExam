@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>แสดงเวลา</title>
+  <title>Final Exam</title>
 </head>
 <body>
   <div>
@@ -14,14 +14,14 @@
   </div>
   <hr>
 
-  <h3>รับค่าเวลา (hh:mm:ss)</h3>
-  <input id="timeInput" placeholder="เช่น 14:30:15">
-  <button onclick="showTime()">แสดง</button>
+  <h3>รับค่าเวลา xx:xx:xx</h3>
+  <input id="timeint" placeholder="ใส่เวลาแบบ : ">
+  <button onclick="showTime()">แสงผล</button>
   <p id="result"></p>
 
   <script>
     function showTime() {
-      let input = document.getElementById("timeInput").value;
+      let input = document.getElementById("timeint").value;
       let parts = input.split(":");
 
       if (parts.length === 3) {
@@ -31,7 +31,7 @@
         document.getElementById("result").textContent = 
           `${hh} นาฬิกา ${mm} นาที ${ss} วินาที`;
       } else {
-        document.getElementById("result").textContent = "รูปแบบไม่ถูกต้อง";
+        document.getElementById("result").textContent = "ไม่ถูกต้อง";
       }
     }
   </script>
